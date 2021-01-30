@@ -35,7 +35,7 @@ def generate_wordcloud():
     # join the tokens into a long string before passing to WordCloud
     lyrics_translated = ' '.join(lyrics_tokens_without_sw)
 
-    wc = WordCloud(max_words=1000000, max_font_size=50).generate(lyrics_translated)
+    wc = WordCloud(max_words=1000000, max_font_size=50, collocations=False).generate(lyrics_translated)
     wc_plt.figure()
     wc_plt.imshow(wc, interpolation='bilinear')
     wc_plt.axis('off')
