@@ -37,3 +37,7 @@ Available properties:
 
 You can use stopwords from `nltk` to prevent useless words from displaying in the Wordcloud. Depending on your case,
 sometimes you need to add more words to the stopwords. In this case, you can add them to `additional_stopwords.py`.
+
+## Example Output
+
+# ![song-lyrics-analyser](media/example-output.png)
