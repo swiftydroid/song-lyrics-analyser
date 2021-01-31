@@ -1,5 +1,6 @@
 import json
 import matplotlib.pyplot as wc_plt
+import re
 from properties import SONGS_FILENAME
 from google_trans_new import google_translator
 from nltk.tokenize import word_tokenize
@@ -27,6 +28,9 @@ def generate_wordcloud():
         lyrics_translated.append(translated_lyrics)
 
     lyrics_translated = ' '.join(lyrics_translated).lower().replace('—', ' ').replace('-', ' ')
+
+    # remove all punctuation except for apostrophe since we can have words like 'cause, fallin' etc
+    lyrics_translated = re.sub(r"[^\w\d'\s]+", '', lyrics_translated)
 
     # remove all stop words
     lyrics_translated = word_tokenize(lyrics_translated)
