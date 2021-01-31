@@ -29,5 +29,11 @@ Available properties:
 
 - `GENIUS_API_TOKEN`: The Genius API token
 - `ARTIST_NAME`: The primary artist name of the songs lyrics
-- `SEARCH_MAX_SONGS`: Maximum number of songs to retrieved. Currently, songs tagged with "Version", "Remix" and "Live" are skipped. You can cater for your needs in get_lyrics.py.
+- `SEARCH_MAX_SONGS`: Maximum number of songs to retrieved. Currently, songs tagged with "Version", "Remix" and "Live"
+  are skipped. You can cater for your needs in get_lyrics.py.
 - `SONGS_FILENAME`: The song lyrics are saved in this filename. By default, the filename is `ARTIST_NAME`.json.
+
+### additional_stopwords.py
+
+You can use stopwords from `nltk` to prevent useless words from displaying in the Wordcloud. Depending on your case,
+sometimes you need to add more words to the stopwords. In this case, you can add them to `additional_stopwords.py`.
